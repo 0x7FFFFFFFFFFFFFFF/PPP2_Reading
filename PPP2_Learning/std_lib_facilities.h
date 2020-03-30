@@ -206,7 +206,8 @@ inline void simple_error(string s)	// write ``error: s and exit program
 
 
 // run-time checked narrowing cast (type conversion). See ???.
-template<class R, class A> R narrow_cast(const A& a)
+template<class R, class A>
+R narrow_cast(const A& a)
 {
 	R r = R(a);
 	if (A(r) != a) error(string("info loss"));
